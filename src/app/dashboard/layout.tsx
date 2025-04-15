@@ -10,7 +10,7 @@ interface Props {
 export default function Layout({ children }: Props) {
   return (
     <div className="grid grid-cols-12 h-screen w-full">
-      <nav className="col-span-2 px-4 pt-12 relative">
+      <nav className="col-span-2 px-4 pt-12 relative bg-gray-300">
         <ul className="flex flex-col gap-y-6">
           {routes.map((route) => {
             return (

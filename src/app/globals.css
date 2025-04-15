@@ -6,3 +6,8 @@
   themes: light --default, dark --prefersdark dark;
 
 }
+
+
+@theme {
+  --color-foreground: #006
+}
