@@ -1,9 +1,14 @@
 "use client";
 
+import AppLogo from "./components/app/AppLogo";
+
 // import { SizeType } from "antd/es/config-provider/SizeContext";
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)] bg-gray-100/50 h-screen w-full md:flex md:flex-col justify-center items-center">
+      <div className="mb-6 grayscale-100">
+        <AppLogo />
+      </div>
       <main className=" sm:items-start py-12 w-96 px-8 rounded-lg md:bg-white md:border-1 md:border-gray-300 ">
         <h1 className="text-center text-3xl  font-semibold ">Welcome back!</h1>
         <p className="prose-lg text-center mb-6 text-gray-400">
@@ -22,7 +27,7 @@ export default function Home() {
           </div>
 
           <div>
-            <label className="w-full text-left text-sm font-semibold mb-2 prose-lg">
+            <label className="w-full text-left text-sm font-semibold mb-2 prose-lg ">
               Password
             </label>
             <input

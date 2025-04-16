@@ -3,7 +3,7 @@ import {
   UserIcon,
   CurrencyDollarIcon,
   Cog6ToothIcon,
-} from "@heroicons/react/24/outline";
+} from "@heroicons/react/24/solid";
 import {
   Squares2X2Icon as SolidSquares2X2Icon,
   UserIcon as SolidUserIcon,

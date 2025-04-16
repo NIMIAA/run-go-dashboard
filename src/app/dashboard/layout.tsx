@@ -2,7 +2,9 @@
 import React, { ReactNode } from "react";
 import { routes } from "../components/routes";
 import Link from "next/link";
-import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/outline";
+import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
+import { BellIcon } from "@heroicons/react/24/outline";
+import AppLogo from "../components/app/AppLogo";
 
 interface Props {
   children: ReactNode;
@@ -10,13 +12,13 @@ interface Props {
 export default function Layout({ children }: Props) {
   return (
     <div className="grid grid-cols-12 h-screen w-full">
-      <nav className="col-span-2 px-4 pt-12 relative bg-gray-300">
-        <ul className="flex flex-col gap-y-6">
+      <nav className="col-span-2 pt-12 relative bg-foreground/95 text-white ">
+        <ul className="flex flex-col gap-y-4">
           {routes.map((route) => {
             return (
               <li key={route.label} className="">
                 <Link
-                  className="flex font-[family-name:var(--font-geist-sans)] items-center gap-x-2 prose-lg capitalize font-medium"
+                  className="flex font-[family-name:var(--font-geist-sans)] items-center gap-x-2 prose-lg capitalize font-medium hover:border-l-white hover:border-l-[4px] py-3 px-2 transition delay-25 ease-in-out duration-200"
                   href={route.path}
                 >
                   {" "}
@@ -33,29 +35,40 @@ export default function Layout({ children }: Props) {
         </ul>
       </nav>
       <main className="col-span-10 bg-white/50 h-screen overflow-x-hidden overflow-y-scroll">
-        <div role="header max-h-12 flex justify-between">
-          <h1 className="text-3xl font-semibold">Rungo</h1>
+        <section
+          role="header"
+          className="flex justify-between border-b-gray-200 border-b-[2px] max-h-24 bg-gray-50/90 py-4 px-16"
+        >
+          <AppLogo className="h-[50px]" />
           <label className="input">
-            <svg
-              className="h-[1em] opacity-50"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <g
-                stroke-linejoin="round"
-                stroke-linecap="round"
-                stroke-width="2.5"
-                fill="none"
-                stroke="currentColor"
-              >
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.3-4.3"></path>
-              </g>
-            </svg>
-            <input type="search" required placeholder="Search" />
+            <input
+              type="search"
+              required
+              placeholder="Search"
+              className="rounded-lg"
+            />
           </label>
-        </div>
-        {children}
+          <div className="flex items-center gap-x-6">
+            <div className="cursor-pointer">
+              <BellIcon className="size-6" />
+            </div>
+            <div className="cursor-pointer flex items-center gap-x-2">
+              <div className="avatar ">
+                <div className="w-10 rounded-full">
+                  <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </div>
+                <div></div>
+              </div>
+              <div>
+                <h6 className="-mb-2 font-medium">Jane Doe</h6>
+                <small>jane@rungo.com</small>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="py-12 px-16 h-[90vh] overflow-y-scroll bg-gray-50">
+          {children}
+        </section>
       </main>
     </div>
   );
