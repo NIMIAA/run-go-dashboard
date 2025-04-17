@@ -4,7 +4,6 @@ import { routes } from "../components/routes";
 import Link from "next/link";
 import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
 import { BellIcon } from "@heroicons/react/24/outline";
-import AppLogo from "../components/app/AppLogo";
 
 interface Props {
   children: ReactNode;
@@ -13,12 +12,12 @@ export default function Layout({ children }: Props) {
   return (
     <div className="grid grid-cols-12 h-screen w-full">
       <nav className="col-span-2 pt-12 relative bg-foreground/95 text-white ">
-        <ul className="flex flex-col gap-y-4">
+        <ul className="flex flex-col gap-y-6 px-4">
           {routes.map((route) => {
             return (
               <li key={route.label} className="">
                 <Link
-                  className="flex font-[family-name:var(--font-geist-sans)] items-center gap-x-2 prose-lg capitalize font-medium hover:border-l-white hover:border-l-[4px] py-3 px-2 transition delay-25 ease-in-out duration-200"
+                  className="flex font-[family-name:var(--font-geist-sans)] items-center gap-x-2 prose-sm capitalize font-medium text-center py-2 px-2 transition delay-25 ease-in-out duration-200 hover:bg-white/90 rounded-lg hover:text-foreground"
                   href={route.path}
                 >
                   {" "}
@@ -29,24 +28,18 @@ export default function Layout({ children }: Props) {
             );
           })}
 
-          <button className="flex font-[family-name:var(--font-geist-sans)] items-center gap-x-2 prose-lg capitalize font-medium position absolute bottom-10 w-full left-0 right-0 px-4">
+          <button className="position absolute bottom-10 left-4 right-4   flex font-[family-name:var(--font-geist-sans)] items-center gap-x-2 prose-sm capitalize font-medium text-center py-2 px-2 transition delay-25 ease-in-out duration-200 hover:bg-white/90 rounded-lg hover:text-foreground">
             <ArrowLeftStartOnRectangleIcon className="size-6" /> Logout
           </button>
         </ul>
       </nav>
-      <main className="col-span-10 bg-white/50 h-screen overflow-x-hidden overflow-y-scroll">
+      <main className="col-span-10 h-screen overflow-x-hidden overflow-y-scroll">
         <section
           role="header"
-          className="flex justify-between border-b-gray-200 border-b-[2px] max-h-24 bg-gray-50/90 py-4 px-16"
+          className="flex justify-between border-b-gray-200 border-b-[2px] max-h-24 bg-gray-50/70 py-4 px-16"
         >
-          <AppLogo className="h-[50px]" />
-          <label className="input">
-            <input
-              type="search"
-              required
-              placeholder="Search"
-              className="rounded-lg"
-            />
+          <label className="input rounded-lg w-3/5 hover:border-foreground hover:outline-transparent focus:outline-none">
+            <input type="search" required placeholder="Search" className="" />
           </label>
           <div className="flex items-center gap-x-6">
             <div className="cursor-pointer">
