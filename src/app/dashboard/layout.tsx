@@ -4,11 +4,14 @@ import { routes } from "../components/routes";
 import Link from "next/link";
 import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
 import { BellIcon } from "@heroicons/react/24/outline";
-
+import { usePathname } from "next/navigation";
 interface Props {
   children: ReactNode;
 }
 export default function Layout({ children }: Props) {
+  const pathname = usePathname();
+
+
   return (
     <div className="grid grid-cols-12 h-screen w-full">
       <nav className="col-span-2 pt-12 relative bg-foreground/95 text-white ">
@@ -17,7 +20,11 @@ export default function Layout({ children }: Props) {
             return (
               <li key={route.label} className="">
                 <Link
-                  className="flex font-[family-name:var(--font-geist-sans)] items-center gap-x-2 prose-sm capitalize font-medium text-center py-2 px-2 transition delay-25 ease-in-out duration-200 hover:bg-white/90 rounded-lg hover:text-foreground"
+                  className={
+                    route.path == pathname
+                      ? "flex font-[family-name:var(--font-geist-sans)] items-center gap-x-2 prose-sm capitalize font-medium text-center py-2 px-2 transition delay-25 ease-in-out duration-200 bg-white/90 rounded-lg text-foreground"
+                      : "flex font-[family-name:var(--font-geist-sans)] items-center gap-x-2 prose-sm capitalize font-medium text-center py-2 px-2 transition delay-25 ease-in-out duration-200 hover:bg-white/90 rounded-lg hover:text-foreground"
+                  }
                   href={route.path}
                 >
                   {" "}
