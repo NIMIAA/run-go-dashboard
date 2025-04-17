@@ -4,7 +4,7 @@ import React from "react";
 export default function Page() {
   return (
     <>
-      <Heading>Settings</Heading>
+      <Heading>Transaction and wallets</Heading>
     </>
   );
 }

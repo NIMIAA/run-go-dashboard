@@ -28,7 +28,7 @@ export const routes = [
     activeicon: <SolidSquares2X2Icon className="size-6" />,
   },
   {
-    path: "/dashboard/driver-management",
+    path: "/dashboard/drivers",
     label: "Driver Management",
     defaultIcon: <BriefcaseIcon className="size-6" />,
     activeicon: <SolidBriefcaseIcon className="size-6" />,

@@ -59,7 +59,7 @@ export default function Layout({ children }: Props) {
             </div>
           </div>
         </section>
-        <section className="py-12 px-16 h-[90vh] overflow-y-scroll bg-gray-50">
+        <section className="py-12 px-16 h-[90vh] overflow-y-scroll bg-gray-200">
           {children}
         </section>
       </main>

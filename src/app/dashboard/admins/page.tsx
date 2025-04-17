@@ -6,9 +6,9 @@ export default function Drivers() {
   return (
     <>
       <div className="flex items-center justify-between">
-        <Heading>Driver Management</Heading>
+        <Heading>Admin Management</Heading>
         <button className="btn btn-md rounded-lg bg-foreground text-white">
-          <PlusIcon className="size-6" /> Driver
+          <PlusIcon className="size-6" /> Admin
         </button>
       </div>
     </>
