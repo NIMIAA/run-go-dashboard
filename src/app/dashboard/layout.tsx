@@ -11,10 +11,9 @@ interface Props {
 export default function Layout({ children }: Props) {
   const pathname = usePathname();
 
-
   return (
     <div className="grid grid-cols-12 h-screen w-full">
-      <nav className="col-span-2 pt-12 relative bg-foreground/95 text-white ">
+      <nav className="  col-span-2 pt-12 relative bg-foreground/95 text-white ">
         <ul className="flex flex-col gap-y-6 px-4">
           {routes.map((route) => {
             return (
