@@ -6,6 +6,7 @@ import ActivityCard, {
 } from "../components/dashboard/ActivityCard";
 import { BanknotesIcon } from "@heroicons/react/24/outline";
 import { CheckIcon } from "@heroicons/react/24/solid";
+import PageHeading from "../components/typography/PageHeading";
 
 export default function Dashboard() {
   const activities: ActivityCardInterface[] = [
@@ -46,9 +47,9 @@ export default function Dashboard() {
   ];
   return (
     <>
-      <Heading>Activity Overview</Heading>
+      <PageHeading>Activity Overview</PageHeading>
 
-      <div className="mt-12 grid grid-cols-3  grid-rows-3 gap-y-4 gap-x-6">
+      <div className="flex flex-col mt-12 md:grid md:grid-cols-3  md:grid-rows-3 gap-y-4 gap-x-6">
         {activities.map((entry) => (
           <ActivityCard
             key={entry.label}

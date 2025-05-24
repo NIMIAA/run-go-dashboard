@@ -51,22 +51,22 @@ export const routes = [
     defaultIcon: <UserGroupIcon className="size-6" />,
     activeicon: <SolidUserGroupIcon className="size-6" />,
   },
-  {
-    path: "/dashboard/disputes",
-    label: "Disput Management",
-    defaultIcon: <InformationCircleIcon className="size-6" />,
-    activeicon: <SolidInformationCircleIcon className="size-6" />,
-  },
-  {
-    path: "/dashboard/account",
-    label: "Account",
-    defaultIcon: <UserIcon className="size-6" />,
-    activeicon: <SolidUserIcon className="size-6" />,
-  },
-  {
-    path: "/dashboard/settings",
-    label: "Settings",
-    defaultIcon: <Cog6ToothIcon className="size-6" />,
-    activeicon: <SolidCog6ToothIcon className="size-6" />,
-  },
+  // {
+  //   path: "/dashboard/disputes",
+  //   label: "Disput Management",
+  //   defaultIcon: <InformationCircleIcon className="size-6" />,
+  //   activeicon: <SolidInformationCircleIcon className="size-6" />,
+  // },
+  // {
+  //   path: "/dashboard/account",
+  //   label: "Account",
+  //   defaultIcon: <UserIcon className="size-6" />,
+  //   activeicon: <SolidUserIcon className="size-6" />,
+  // },
+  // {
+  //   path: "/dashboard/settings",
+  //   label: "Settings",
+  //   defaultIcon: <Cog6ToothIcon className="size-6" />,
+  //   activeicon: <SolidCog6ToothIcon className="size-6" />,
+  // },
 ];

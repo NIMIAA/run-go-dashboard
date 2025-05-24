@@ -21,8 +21,8 @@ export default function ActivityCard({
   } from last month`;
   return (
     <>
-      <div className=" bg-white card  shadow-sm px-6 pt-4 pb-6 rounded-xl">
-        <div className="p-2 border-gray-200 border-1 w-fit rounded-full mb-6 ">
+      <div className=" bg-white/50 card  shadow px-6 pt-4 pb-6 rounded-xl w-full">
+        <div className="p-2 border-gray-300 border-1 w-fit rounded-full mb-6 ">
           {icon}
         </div>
         <div className="">
